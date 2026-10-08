@@ -14,6 +14,7 @@ import com.mesaayuda.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Optional;
 
@@ -136,7 +137,7 @@ public class IncidenciaService {
         );
 
         incidencia.setFechaRegistro(
-                LocalDateTime.now()
+                LocalDateTime.now(ZoneId.of("America/Lima"))
         );
 
         incidencia.setEstado(
@@ -220,7 +221,7 @@ public class IncidenciaService {
         );
 
         incidencia.setFechaAsignacion(
-                LocalDateTime.now()
+                LocalDateTime.now(ZoneId.of("America/Lima"))
         );
 
         Incidencia actualizada =
@@ -364,7 +365,7 @@ public class IncidenciaService {
         incidencia.setEstado(nuevoEstado);
 
         LocalDateTime ahora =
-                LocalDateTime.now();
+                LocalDateTime.now(ZoneId.of("America/Lima"));
 
         switch (nuevoEstado) {
 

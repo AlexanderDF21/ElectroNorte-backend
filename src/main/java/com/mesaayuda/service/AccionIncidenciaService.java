@@ -10,6 +10,7 @@ import com.mesaayuda.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 @Service
@@ -76,7 +77,7 @@ public class AccionIncidenciaService {
         accion.setIncidencia(incidencia);
         accion.setTecnico(tecnico);
         accion.setDescripcion(descripcion);
-        accion.setFechaHora(LocalDateTime.now());
+        accion.setFechaHora(LocalDateTime.now(ZoneId.of("America/Lima")));
 
         return accionIncidenciaRepository.save(accion);
     }

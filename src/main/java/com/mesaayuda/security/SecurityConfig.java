@@ -232,7 +232,10 @@ public class SecurityConfig {
                 new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:4200")
+                List.of(
+                        "http://localhost:4200",
+                        "https://lemon-cliff-0e380020f.6.azurestaticapps.net"
+                )
         );
 
         configuration.setAllowedMethods(

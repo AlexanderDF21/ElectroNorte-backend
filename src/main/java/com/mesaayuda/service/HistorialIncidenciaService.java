@@ -7,6 +7,7 @@ import com.mesaayuda.repository.HistorialIncidenciaRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 @Service
@@ -34,7 +35,7 @@ public class HistorialIncidenciaService {
         historial.setAccion(accion);
         historial.setEstadoAnterior(estadoAnterior);
         historial.setEstadoNuevo(estadoNuevo);
-        historial.setFechaHora(LocalDateTime.now());
+        historial.setFechaHora(LocalDateTime.now(ZoneId.of("America/Lima")));
         historial.setObservacion(observacion);
 
         return historialRepository.save(historial);
