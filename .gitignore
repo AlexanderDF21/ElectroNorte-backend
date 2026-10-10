@@ -46,3 +46,7 @@ application-secrets.properties
 
 # Archivos compilados
 target/
+
+# Archivos temporales y registros
+*.log
+*.class
